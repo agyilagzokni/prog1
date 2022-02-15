@@ -39,17 +39,27 @@ int main()
 
 	Axis x {Axis::x, Point{100, y_orig}, xlength, xlength/xscale, "x"};
 	Axis y {Axis::y, Point{x_orig, ylength + 20}, ylength, ylength/yscale, "y"};
-	Rectangle r {Point{200,200}, 100, 50};
+	//Rectangle r {Point{200,200}, 100, 50};
 
-	r.set_fill_color(Color::yellow);
-	r.set_style(Line_style(Line_style::dash, 4));
+	//r.set_fill_color(Color::yellow);
+	//r.set_style(Line_style(Line_style::dash, 4));
 
 	Text t {Point{500,100}, "kaszinoxdd"};
 	t.set_font(Font::times_bold);
 	t.set_font_size(20);
 	t.set_color(Color::red);
 
-	Image ii {Point{100,100}, "ncore1.png"};
+	Polygon p {Point(350, 100)};
+	p.add(Point(400, 200));
+	p.add(Point(300, 200));
+	p.set_color(Color::red);
+
+	Text hszog {Point(300, 200), "harmszog xdddddd"};
+	hszog.set_font(Font::times_bold);
+	hszog.set_font_size(15);
+	hszog.set_color(Color::red);
+
+	Image ii {Point{100,100}, "ncore1.jpg"};
 
 	Circle c {Point{700,700}, 100};
 
@@ -60,12 +70,14 @@ int main()
 	win.attach(ii);
 	win.attach(c);
 	win.attach(t);
-	win.attach(r);
+	//win.attach(r);
 	win.attach(s);
 	win.attach(sq);
 	win.attach(cos_func);
 	win.attach(x);
 	win.attach(y);
+	win.attach(p);
+	win.attach(hszog);
 
     win.wait_for_button();
 
