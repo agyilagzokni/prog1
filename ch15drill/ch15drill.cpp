@@ -10,6 +10,15 @@ double one (double x){
 double slope (double x){
     return x/2;
 }
+double square(double x){
+    return x * x;
+}
+double sloping_cos(double x){
+    return cos(x) + slope(x);
+}
+double cosine(double x){
+    return cos(x);
+}
 int main()
 {
     using namespace Graph_lib;
@@ -29,17 +38,30 @@ int main()
     Axis x {Axis::x, Point{100, 300}, 400, 20, "1 == 20 pixels"};
     Axis y {Axis::y, Point{300, 500}, 400, 20, "1 == 20 pixels"};
 
-    Function fx_one {one, -10, 11, Point{300, 300}, 400, 20, 20};
+    Function fx_one {one, minrange, maxrange, p, npoints, xscale, yscale};
+  
     Function fx_slope {slope, minrange, maxrange, p, npoints, xscale, yscale};
-    Text slope_text {200};
+    Text slope_text {Point{100, 380}, "x/2"};
+
+    Function fx_sq {square, minrange, maxrange, p, npoints, xscale, yscale};
+
+    Function fx_cos {cosine, minrange, maxrange, p, npoints, xscale, yscale};
+
+    Function fx_slopingcos{sloping_cos, minrange, maxrange, p, npoints, xscale, yscale};
 
     x.set_color(Color::red);
     y.set_color(Color::red);
+
+    fx_cos.set_color(Color::blue);
 
     win.attach(x);
     win.attach(y);
     win.attach(fx_one);
     win.attach(fx_slope);
+    win.attach(slope_text);
+    win.attach(fx_sq);
+    win.attach(fx_cos);
+    win.attach(fx_slopingcos);
 
     win.wait_for_button();
 
