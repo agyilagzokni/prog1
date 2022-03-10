@@ -17,6 +17,6 @@ int main()
 	p.age = 63;
 	cout << "ember neve: " << p.name << "\nemberünk ennyi idos: " << p.age << "\n";
 	//3.
-
+	
 	return 0;
 }
