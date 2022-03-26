@@ -1,11 +1,11 @@
 /*
-    g++ ch16drill.cpp Graph.cpp Window.cpp GUI.cpp Simple_window.cpp -o main `fltk-config --ldflags --use-images`
+    g++ ch16drill.cpp Graph.cpp Window.cpp GUI.cpp Lines_window.cpp -o main `fltk-config --ldflags --use-images`
 */
-#include "GUI.h"
+#include "Lines_window.h"
 
 int main()
 {
-    using namespace Graph_lib;
+    
 
     try{
         Lines_window win {Point{100, 100}, 600, 400, "lines"};

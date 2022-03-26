@@ -7,6 +7,8 @@
 
 #include "Point.h"
 
+#include "GUI.h"
+
 namespace Graph_lib {
 
 class Shape;

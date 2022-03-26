@@ -2,13 +2,16 @@
 
 Lines_window::Lines_window(Point xy, int w, int h, const string& title)
     :Window{xy,w,h,title},
-    next_button{Point{x_max()-300,0}, 150, 40, "Next point",
-        [](Address, Address pw) {reference_to<Lines_window>(pw).next();}},
-    quit_button{Point{x_max()-150,0}, 150, 40, "Quit",
-        [](Address, Address pw) {reference_to<Lines_window>(pw).quit();}},
-    next_x{Point{300,0}, 50, 40, "next x:"},
-    next_y{Point{450,0}, 50, 40, "next y:"},
-    xy_out{Point{100,0}, 100, 40, "current (x,y):"}
+
+    next_button{Point{x_max()-250,0}, 80, 20, "Add point", 
+    [](Address, Address pw) {reference_to<Lines_window>(pw).next();}},
+
+    quit_button{Point{x_max()-100,0}, 100, 20, "Quit", 
+    [](Address, Address pw) {reference_to<Lines_window>(pw).quit();}},
+
+    next_x{Point{x_max()-460,0}, 50, 20, "next x:"},
+    next_y{Point{x_max()-335,0}, 50, 20, "next y:"},
+    xy_out{Point{100,0}, 100, 20, "current (x,y):"},
 {
     attach(next_button);
     attach(quit_button);
