@@ -1,0 +1,10 @@
+aldi 3 6.1
+lidl 2 97.7
+kfc 7 63.8
+penny 0 12.5
+cba 4 31.5
+spar 1 72.1
+mcdonalds 6 41.6
+ibi 9 105.9
+doberdoabc 5 99.9
+burgerking 8 71.4
