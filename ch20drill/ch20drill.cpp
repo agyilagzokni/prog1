@@ -22,10 +22,10 @@ int main()
 	list<int> lis2 = lis;
 
 	for(int i = 0;i<10;++i){
-		arr2[i] += 2;
+		arr[i] += 2;
 	}
 	for(int i = 0;i<10;++i){
-		vec2[i] += 3;
+		vec[i] += 3;
 	}
 	for(int& i:lis){
 		i +=5;
@@ -38,8 +38,23 @@ int main()
 		for(int i = 0;i<vec.size(); ++i){
 			if(vec[i] == 3){
 				cout << "itt van a harom: " << i << "\n";
+				break;
 			}
 		}
+	}else{
+		cout << "nincs harom :( \n";
+	}
+	if(find(lis.begin(), lis.end(), 27) != lis.end()){
+		int counter = 0;
+		for(int i:lis){
+			if(i == 27){
+				cout << "itt a huszonhét : " << counter << "\n";
+				break;
+			}
+			counter++;
+		}
+	}else{
+		cout << "nincs huszonhet :(( \n";
 	}
 
 	return 0;
